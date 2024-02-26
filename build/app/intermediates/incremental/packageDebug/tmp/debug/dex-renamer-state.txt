@@ -1,0 +1,4 @@
+#Mon Feb 26 09:06:47 IST 2024
+base.0=D\:\\Project_Tridel\\tems_tridel\\Flutter Routing Map Leaflet\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
