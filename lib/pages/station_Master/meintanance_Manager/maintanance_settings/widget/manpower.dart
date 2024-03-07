@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../../utils/style.dart';
 
@@ -48,9 +49,10 @@ class _ManPowerTabState extends State<ManPowerTab> {
           padding: const EdgeInsets.all(8.0),
           child: ListView(
             children: [
-              const Text(
+              Text(
                 'Add Man Power',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                style: GoogleFonts.ubuntu(
+                    fontWeight: FontWeight.bold, fontSize: 17),
               ),
               const SizedBox(
                 height: 20,
@@ -93,10 +95,10 @@ class _ManPowerTabState extends State<ManPowerTab> {
                     decoration: BoxDecoration(
                         color: AppColor.Blue,
                         borderRadius: BorderRadius.all(Radius.circular(10))),
-                    child: const Center(
+                    child: Center(
                       child: Text(
                         'Add',
-                        style: TextStyle(
+                        style: GoogleFonts.ubuntu(
                             color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                     ),

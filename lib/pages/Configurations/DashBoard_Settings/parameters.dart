@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../utils/style.dart';
 
@@ -27,10 +28,10 @@ class _TextParametersState extends State<TextParameters> {
       child: Center(
         child: Stack(
           children: [
-            const Center(
+            Center(
               child: Text(
                 'Click to Show Parameters',
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.ubuntu(color: Colors.white),
               ),
             ),
             Visibility(
@@ -44,13 +45,13 @@ class _TextParametersState extends State<TextParameters> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         'Parameter 1: Value',
-                        style: TextStyle(fontSize: 16),
+                        style: GoogleFonts.ubuntu(fontSize: 16),
                       ),
-                      const Text(
+                      Text(
                         'Parameter 2: Value',
-                        style: TextStyle(fontSize: 16),
+                        style: GoogleFonts.ubuntu(fontSize: 16),
                       ),
                       const SizedBox(height: 10),
                       GestureDetector(
@@ -59,7 +60,7 @@ class _TextParametersState extends State<TextParameters> {
                         },
                         child: Text(
                           'Hide Parameters',
-                          style: TextStyle(
+                          style: GoogleFonts.ubuntu(
                             fontSize: 16,
                             color: AppColor.Blue,
                             decoration: TextDecoration.underline,

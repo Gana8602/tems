@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/Maintenance_Dashboard/Maintenace_Reports/tabs/daily_progress_report.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/Maintenance_Dashboard/Maintenace_Reports/tabs/primary_details.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/Maintenance_Dashboard/Maintenace_Reports/tabs/standard_procedure.dart';
@@ -41,7 +42,8 @@ class _AddReportPageState extends State<AddReportPage> {
                     children: [
                       Text(
                         'Request Details',
-                        style: TextStyle(color: Colors.blue, fontSize: 18),
+                        style: GoogleFonts.ubuntu(
+                            color: Colors.blue, fontSize: 18),
                       ),
                       IconButton(
                         icon: Icon(
@@ -143,7 +145,7 @@ class _AddReportPageState extends State<AddReportPage> {
                             child: Center(
                               child: Text(
                                 'Cancel',
-                                style: TextStyle(color: AppColor.Blue),
+                                style: GoogleFonts.ubuntu(color: AppColor.Blue),
                               ),
                             ),
                           ),
@@ -165,7 +167,8 @@ class _AddReportPageState extends State<AddReportPage> {
                                   child: Center(
                                     child: Text(
                                       'Save',
-                                      style: TextStyle(color: Colors.white),
+                                      style: GoogleFonts.ubuntu(
+                                          color: Colors.white),
                                     ),
                                   ),
                                 ),
@@ -181,7 +184,8 @@ class _AddReportPageState extends State<AddReportPage> {
                                 child: Center(
                                   child: Text(
                                     'Save',
-                                    style: TextStyle(color: Colors.white),
+                                    style:
+                                        GoogleFonts.ubuntu(color: Colors.white),
                                   ),
                                 ),
                               ),

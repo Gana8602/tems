@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/controllers/style_controller.dart';
 import 'package:route_between_two_points/pages/widget/style.dart';
 
@@ -67,7 +68,7 @@ class DrawerRight extends StatelessWidget {
                             ),
                             Text(
                               'Dark Map',
-                              style: TextStyle(color: AppColor.Blue),
+                              style: GoogleFonts.ubuntu(color: AppColor.Blue),
                             )
                           ],
                         ),
@@ -90,7 +91,7 @@ class DrawerRight extends StatelessWidget {
                             ),
                             Text(
                               'White Map',
-                              style: TextStyle(color: AppColor.Blue),
+                              style: GoogleFonts.ubuntu(color: AppColor.Blue),
                             )
                           ],
                         ),
@@ -113,7 +114,7 @@ class DrawerRight extends StatelessWidget {
                             ),
                             Text(
                               'Satellite',
-                              style: TextStyle(color: AppColor.Blue),
+                              style: GoogleFonts.ubuntu(color: AppColor.Blue),
                             )
                           ],
                         ),

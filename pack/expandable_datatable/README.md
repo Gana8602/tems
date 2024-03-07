@@ -37,13 +37,13 @@ ExpandableDataTable is a Flutter library for dealing with displaying and editing
 
 | Name                          | Description                                                              |
 | ----------------------------- | ------------------------------------------------------------------------ |
-| headerTextStyle               | Text style of header row                                                 |
-| rowTextStyle                  | Text style of all rows                                                   |
+| headerGoogleFonts.ubuntu               | Text style of header row                                                 |
+| rowGoogleFonts.ubuntu                  | Text style of all rows                                                   |
 | contentPadding                | Padding for all header and data rows                                     |
 | headerTextMaxLines            | Maximum number of lines for header text to span                          |
 | rowTextMaxLines               | Maximum number of lines for row text to span                             |
 | rowTextOverflow               | Visual overflow of the row's cell text                                   |
-| expandedTextStyle             | Text style of expansion content                                          |
+| expandedGoogleFonts.ubuntu             | Text style of expansion content                                          |
 | headerColor                   | Background color of header row                                           |
 | headerSortIconColor           | Color of the header sort arrow icon                                      |
 | headerHeight                  | Height of the header widget                                              |
@@ -55,7 +55,7 @@ ExpandableDataTable is a Flutter library for dealing with displaying and editing
 | editIcon                      | Icon image showing editing feature                                       |
 | expansionIcon                 | Icon image expanding expansion content                                   |
 | paginationSize                | Size of the default pagination widget                                    |
-| paginationTextStyle           | TextStyle of the page numbers for default pagination widget              |
+| paginationGoogleFonts.ubuntu           | GoogleFonts.ubuntu of the page numbers for default pagination widget              |
 | paginationSelectedTextColor   | Color of the selected cell's page number for default pagination widget   |
 | paginationUnselectedTextColor | Color of the unselected cells' page number for default pagination widget |
 | paginationSelectedFillColor   | Background fill color of the selected cell for default pagination widget |

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/MainPAge.dart';
 import 'package:route_between_two_points/pages/widget/style.dart';
 
@@ -85,11 +86,12 @@ class MapView extends StatelessWidget {
                     children: [
                       Text(
                         'Last Updated : ${DateTime.now().year}-${DateTime.now().month}-${DateTime.now().day}',
-                        style: const TextStyle(fontSize: 15),
+                        style: GoogleFonts.ubuntu(fontSize: 15),
                       ),
                       Text(
                         'Bhitarkanika National Park',
-                        style: TextStyle(color: AppColor.Blue, fontSize: 18),
+                        style: GoogleFonts.ubuntu(
+                            color: AppColor.Blue, fontSize: 18),
                       ),
                     ],
                   ),
@@ -108,7 +110,7 @@ class MapView extends StatelessWidget {
                             children: [
                               Text(
                                 '35.4',
-                                style: TextStyle(
+                                style: GoogleFonts.ubuntu(
                                     color: AppColor.Blue, fontSize: 20),
                               ),
                               Column(
@@ -117,11 +119,11 @@ class MapView extends StatelessWidget {
                                 children: [
                                   Text(
                                     'Temperature',
-                                    style: TextStyle(fontSize: 16),
+                                    style: GoogleFonts.ubuntu(fontSize: 16),
                                   ),
                                   Text(
                                     '°C',
-                                    style: TextStyle(fontSize: 12),
+                                    style: GoogleFonts.ubuntu(fontSize: 12),
                                   )
                                 ],
                               ),
@@ -138,7 +140,7 @@ class MapView extends StatelessWidget {
                             children: [
                               Text(
                                 '-',
-                                style: TextStyle(
+                                style: GoogleFonts.ubuntu(
                                     color: AppColor.Blue, fontSize: 20),
                               ),
                               Column(
@@ -147,11 +149,11 @@ class MapView extends StatelessWidget {
                                 children: [
                                   Text(
                                     'Pressure',
-                                    style: TextStyle(fontSize: 16),
+                                    style: GoogleFonts.ubuntu(fontSize: 16),
                                   ),
                                   Text(
                                     'Psi',
-                                    style: TextStyle(fontSize: 12),
+                                    style: GoogleFonts.ubuntu(fontSize: 12),
                                   )
                                 ],
                               ),

@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:route_between_two_points/pages/widget/bar.dart';
 import 'package:route_between_two_points/pages/widget/drawer_left/drawer_left.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import '../../../utils/style.dart';
 
 class NotificationSettings extends StatefulWidget {
@@ -53,9 +53,9 @@ class _NotificationSettingsState extends State<NotificationSettings> {
           padding: const EdgeInsets.all(8.0),
           child: ListView(
             children: [
-              const Text(
+              Text(
                 'User Action Log',
-                style: TextStyle(fontSize: 20),
+                style: GoogleFonts.ubuntu(fontSize: 20),
               ),
               const Row(
                 children: [
@@ -192,10 +192,11 @@ class _NotificationSettingsState extends State<NotificationSettings> {
                                           color: AppColor.Blue,
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(6))),
-                                      child: const Center(
+                                      child: Center(
                                         child: Text(
                                           'Add',
-                                          style: TextStyle(color: Colors.white),
+                                          style: GoogleFonts.ubuntu(
+                                              color: Colors.white),
                                         ),
                                       ),
                                     ),
@@ -214,10 +215,11 @@ class _NotificationSettingsState extends State<NotificationSettings> {
                                           color: AppColor.Blue,
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(6))),
-                                      child: const Center(
+                                      child: Center(
                                         child: Text(
                                           'Clear',
-                                          style: TextStyle(color: Colors.white),
+                                          style: GoogleFonts.ubuntu(
+                                              color: Colors.white),
                                         ),
                                       ),
                                     ),
@@ -227,9 +229,9 @@ class _NotificationSettingsState extends State<NotificationSettings> {
                               const SizedBox(
                                 height: 15,
                               ),
-                              const Text(
+                              Text(
                                 'Water Quality Notification Details',
-                                style: TextStyle(fontSize: 19),
+                                style: GoogleFonts.ubuntu(fontSize: 19),
                               ),
                               const SizedBox(
                                 height: 15,

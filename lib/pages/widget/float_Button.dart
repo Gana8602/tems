@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:route_between_two_points/bool/bool_values.dart';
 
+import '../../utils/string.dart';
 import '../../utils/style.dart';
 
 class FloatButton extends StatefulWidget {
@@ -16,7 +17,8 @@ class FloatButton extends StatefulWidget {
 }
 
 class _FloatButtonState extends State<FloatButton> {
-  BoolValues _val = Get.put(BoolValues());
+  DrawerStrings _string = Get.put(DrawerStrings());
+
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
@@ -28,8 +30,7 @@ class _FloatButtonState extends State<FloatButton> {
             return FloatingActionButton(
               onPressed: () {
                 setState(() {
-                  _val.showFilterDrawer.value = false;
-                  _val.showStatisticDrawer.value = false;
+                  _string.drawervalue = 'main';
                 });
 
                 Scaffold.of(context).openEndDrawer();

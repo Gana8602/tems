@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/Maintenance_Dashboard/Maintenace_Reports/maintenance_reports.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/Maintenance_Dashboard/Maintenance_Requests/maintenance_requests.dart';
 
@@ -41,17 +42,17 @@ class _MaintenanceDashboardPageState extends State<MaintenanceDashboardPage>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Maintenance Dashboard',
-              style: TextStyle(fontSize: 25),
+              style: GoogleFonts.ubuntu(fontSize: 25),
             ),
             Row(
               children: [
                 InkWell(
                   onTap: () => Get.to(() => const HomePage()),
-                  child: const Text(
+                  child: Text(
                     'Home',
-                    style: TextStyle(fontSize: 17),
+                    style: GoogleFonts.ubuntu(fontSize: 17),
                   ),
                 ),
                 const SizedBox(
@@ -67,14 +68,15 @@ class _MaintenanceDashboardPageState extends State<MaintenanceDashboardPage>
                 ),
                 InkWell(
                   onTap: () => Get.to(() => const MaintenanceDashboardPage()),
-                  child: const Text(
+                  child: Text(
                     'Maintenance Module',
-                    style: TextStyle(fontSize: 17),
+                    style: GoogleFonts.ubuntu(fontSize: 17),
                   ),
                 ),
               ],
             ),
             TabBar(
+              indicatorSize: TabBarIndicatorSize.tab,
               // isScrollable: true,
               indicator: BoxDecoration(
                   color: AppColor.Blue,
@@ -134,7 +136,7 @@ class _MaintenanceDashboardPageState extends State<MaintenanceDashboardPage>
             //         ),
             //         label: Text(
             //           'Maintenance Cycle',
-            //           style: TextStyle(color: Colors.white, fontSize: 16),
+            //           style: GoogleFonts.ubuntu(color: Colors.white, fontSize: 16),
             //         ),
             //       ),
             //     ),
@@ -157,7 +159,7 @@ class _MaintenanceDashboardPageState extends State<MaintenanceDashboardPage>
             //             'assets/svg/maintenance_reports.svg'),
             //         label: Text(
             //           'Maintenance Reports',
-            //           style: TextStyle(color: Colors.black, fontSize: 16),
+            //           style: GoogleFonts.ubuntu(color: Colors.black, fontSize: 16),
             //         ),
             //       ),
             //     ),
@@ -178,7 +180,7 @@ class _MaintenanceDashboardPageState extends State<MaintenanceDashboardPage>
             //             'assets/svg/maintenance_request.svg'),
             //         label: Text(
             //           'Maintenance Request',
-            //           style: TextStyle(color: Colors.black, fontSize: 16),
+            //           style: GoogleFonts.ubuntu(color: Colors.black, fontSize: 16),
             //         ),
             //       ),
             //     ),

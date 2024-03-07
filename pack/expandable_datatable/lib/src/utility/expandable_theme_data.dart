@@ -13,7 +13,7 @@ class ExpandableThemeData {
   final TextStyle headerTextStyle;
 
   /// Text style of all rows.
-  final TextStyle rowTextStyle;
+  final TextStyle rowTextSTyle;
 
   /// Maximum number of lines for header text to span.
   ///
@@ -148,7 +148,7 @@ class ExpandableThemeData {
       contentPadding: contentPadding,
       expansionIcon: expansionIcon,
       headerTextStyle: headerTextStyle,
-      rowTextStyle: rowTextStyle,
+      rowTextSTyle: rowTextStyle,
       headerTextMaxLines: headerTextMaxLines,
       rowTextMaxLines: rowTextMaxLines,
       rowTextOverflow: rowTextOverflow,
@@ -176,7 +176,7 @@ class ExpandableThemeData {
   ExpandableThemeData.raw({
     required this.contentPadding,
     required this.headerTextStyle,
-    required this.rowTextStyle,
+    required this.rowTextSTyle,
     required this.headerTextMaxLines,
     required this.rowTextMaxLines,
     required this.rowTextOverflow,

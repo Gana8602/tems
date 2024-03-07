@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TabTick extends StatefulWidget {
   String val;
@@ -55,7 +56,7 @@ class _TabTickState extends State<TabTick> {
           ),
           Text(
             widget.val,
-            style: const TextStyle(fontSize: 20),
+            style: GoogleFonts.ubuntu(fontSize: 20),
           ),
         ],
       ),

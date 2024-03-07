@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/maintanance_settings/widget/configuration.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/maintanance_settings/widget/manpower.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/maintanance_settings/widget/physical.dart';
@@ -33,9 +34,9 @@ class _MaintananceSettingsState extends State<MaintananceSettings>
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const Text(
+          Text(
             'User Action Log',
-            style: TextStyle(fontSize: 20),
+            style: GoogleFonts.ubuntu(fontSize: 20),
           ),
           const Row(
             children: [
@@ -44,6 +45,7 @@ class _MaintananceSettingsState extends State<MaintananceSettings>
             ],
           ),
           TabBar(
+            indicatorSize: TabBarIndicatorSize.tab,
             isScrollable: true,
             tabs: const [
               Tab(

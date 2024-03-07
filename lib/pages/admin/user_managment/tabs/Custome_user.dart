@@ -1,10 +1,11 @@
 // ignore_for_file: file_names, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 
 import '../../../../utils/style.dart';
-import '../../../station_Master/Station_Master/Tabs/widget.dart';
+import '../../../station_Master/Station_management/Tabs/widget.dart';
 
 class CustomUserRole extends StatefulWidget {
   const CustomUserRole({super.key});
@@ -45,11 +46,11 @@ class _CustomUserRoleState extends State<CustomUserRole> {
           padding: const EdgeInsets.all(8.0),
           child: ListView(
             children: [
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
                   'User Role',
-                  style: TextStyle(fontSize: 20),
+                  style: GoogleFonts.ubuntu(fontSize: 20),
                 ),
               ),
               const Divider(),

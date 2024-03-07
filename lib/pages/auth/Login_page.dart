@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../utils/style.dart';
 
@@ -86,15 +87,15 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           Text(
                             'Welcome to \nEnvironmental Data \nStudio',
-                            style:
-                                TextStyle(color: AppColor.Blue, fontSize: 24),
+                            style: GoogleFonts.ubuntu(
+                                color: AppColor.Blue, fontSize: 24),
                           ),
                           const SizedBox(
                             height: 15,
                           ),
-                          const Text(
+                          Text(
                             'Please use your credentials to login.',
-                            style: TextStyle(fontSize: 15),
+                            style: GoogleFonts.ubuntu(fontSize: 15),
                           ),
                           const SizedBox(
                             height: 15,
@@ -147,10 +148,10 @@ class _LoginPageState extends State<LoginPage> {
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(7)),
                               ),
-                              child: const Center(
+                              child: Center(
                                   child: Text(
                                 'Log In',
-                                style: TextStyle(
+                                style: GoogleFonts.ubuntu(
                                     color: Colors.white,
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold),

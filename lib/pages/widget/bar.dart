@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import '../../utils/style.dart';
 
 PreferredSize Head(BuildContext context) => PreferredSize(
@@ -40,11 +40,11 @@ PreferredSize Head(BuildContext context) => PreferredSize(
               const SizedBox(
                 width: 8,
               ),
-              const Text(
-                'T E M S',
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              ),
+              Text('T E M S',
+                  style: GoogleFonts.ubuntu(
+                      color: Colors.white, fontWeight: FontWeight.bold)
+                  // GoogleFonts.ubuntu(color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
             ],
           ),
           actions: <Widget>[

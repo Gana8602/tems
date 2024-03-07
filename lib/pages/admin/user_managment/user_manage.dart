@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/pages/admin/user_managment/tabs/Custome_user.dart';
 import 'package:route_between_two_points/pages/admin/user_managment/tabs/user_create.dart';
 
@@ -29,9 +30,9 @@ class _UserManagmentState extends State<UserManagment>
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const Text(
+          Text(
             'User Action Log',
-            style: TextStyle(fontSize: 20),
+            style: GoogleFonts.ubuntu(fontSize: 20),
           ),
           const Row(
             children: [
@@ -40,6 +41,7 @@ class _UserManagmentState extends State<UserManagment>
             ],
           ),
           TabBar(
+            indicatorSize: TabBarIndicatorSize.tab,
             tabs: const [
               Tab(
                 text: 'User Management',

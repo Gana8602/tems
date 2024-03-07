@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 
 class PrimaryDetails extends StatefulWidget {
@@ -70,7 +71,7 @@ class _PrimaryDetailsState extends State<PrimaryDetails> {
             children: [
               Text(
                 'Primary Details',
-                style: TextStyle(color: Colors.blue, fontSize: 16),
+                style: GoogleFonts.ubuntu(color: Colors.blue, fontSize: 16),
               ),
               SizedBox(
                 height: 10,
@@ -125,7 +126,7 @@ class _PrimaryDetailsState extends State<PrimaryDetails> {
                     selectionType: SelectionType.multi,
                     chipConfig: const ChipConfig(wrapType: WrapType.wrap),
                     dropdownHeight: 300,
-                    optionTextStyle: const TextStyle(fontSize: 16),
+                    optionTextStyle: GoogleFonts.ubuntu(fontSize: 16),
                     showChipInSingleSelectMode: true,
                     selectedOptionIcon: const Icon(Icons.check_circle),
                   ),

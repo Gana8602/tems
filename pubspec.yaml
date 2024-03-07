@@ -47,7 +47,7 @@ dependencies:
   syncfusion_flutter_gauges: ^24.2.4
   syncfusion_flutter_charts: ^24.2.8
   expandable_datatable: 
-   path: ./pack/expandable_datatable/
+   git: https://github.com/Gana8602/pack.git
   marquee: ^2.2.3
   multi_dropdown: ^2.0.0
   percent_indicator: ^4.2.3
@@ -55,6 +55,8 @@ dependencies:
   image_picker: ^1.0.7
   fl_chart: ^0.66.2
   top_modal_sheet: ^2.1.0
+  file_picker: ^6.1.1
+  google_fonts: ^4.0.4
   
 
 dev_dependencies:

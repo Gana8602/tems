@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MaintenanceCycle extends StatefulWidget {
   const MaintenanceCycle({super.key});
@@ -53,15 +54,25 @@ class _MaintenanceCycleState extends State<MaintenanceCycle> {
           padding: const EdgeInsets.all(8.0),
           child: ListView(
             children: [
-              Column(
-                children: [
-                  for (int i = 0; i < MaintenanceDashboardValue.length; i++)
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+              Container(
+                height: 250,
+                width: double.infinity,
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    // crossAxisSpacing: 4.0, // Adjust as needed
+                    // mainAxisSpacing: 4.0, // Adjust as needed
+                  ),
+                  // scrollDirection: Axis.vertical,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: MaintenanceDashboardValue.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.all(4.0),
                       child: Container(
-                        padding: const EdgeInsets.only(top: 40),
-                        height: 230,
-                        width: 300,
+                        // padding: const EdgeInsets.only(top: 40),
+                        height: 100,
+                        width: 100,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           boxShadow: [
@@ -74,10 +85,11 @@ class _MaintenanceCycleState extends State<MaintenanceCycle> {
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              height: 60,
-                              width: 60,
+                              height: 30,
+                              width: 30,
                               decoration: BoxDecoration(
                                 color: Colors.lightBlue,
                                 borderRadius: BorderRadius.circular(100),
@@ -86,30 +98,32 @@ class _MaintenanceCycleState extends State<MaintenanceCycle> {
                                 child: FittedBox(
                                   fit: BoxFit.contain,
                                   child: SvgPicture.asset(
-                                    '${MaintenanceDashboardValue[i]['icon']}',
+                                    '${MaintenanceDashboardValue[index]['icon']}',
                                     // ignore: deprecated_member_use
                                     color: Colors.white,
-                                    width: 30,
-                                    height: 30,
+                                    width: 15,
+                                    height: 15,
                                   ),
                                 ),
                               ),
                             ),
                             const SizedBox(
-                              height: 35,
+                              height: 5,
                             ),
                             Text(
-                              MaintenanceDashboardValue[i]['text'].toString(),
-                              style: const TextStyle(
-                                fontSize: 22,
+                              MaintenanceDashboardValue[index]['text']
+                                  .toString(),
+                              style: GoogleFonts.ubuntu(
+                                fontSize: 14,
                                 color: Colors.lightBlue,
                               ),
                             ),
                           ],
                         ),
                       ),
-                    ),
-                ],
+                    );
+                  },
+                ),
               ),
               SizedBox(
                 height: 10,
@@ -119,7 +133,8 @@ class _MaintenanceCycleState extends State<MaintenanceCycle> {
                 children: <Widget>[
                   Text(
                     "Project Process",
-                    style: TextStyle(color: Colors.lightBlue, fontSize: 20),
+                    style: GoogleFonts.ubuntu(
+                        color: Colors.lightBlue, fontSize: 20),
                   ),
                   SizedBox(
                     height: 10,
@@ -140,8 +155,8 @@ class _MaintenanceCycleState extends State<MaintenanceCycle> {
                           child: Center(
                             child: Text(
                               'Completed',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16),
+                              style: GoogleFonts.ubuntu(
+                                  color: Colors.white, fontSize: 16),
                             ),
                           ),
                         ),
@@ -160,8 +175,8 @@ class _MaintenanceCycleState extends State<MaintenanceCycle> {
                           child: Center(
                             child: Text(
                               'Planned',
-                              style:
-                                  TextStyle(color: Colors.amber, fontSize: 16),
+                              style: GoogleFonts.ubuntu(
+                                  color: Colors.amber, fontSize: 16),
                             ),
                           ),
                         ),
@@ -180,7 +195,8 @@ class _MaintenanceCycleState extends State<MaintenanceCycle> {
                           child: Center(
                             child: Text(
                               'Overdue',
-                              style: TextStyle(color: Colors.red, fontSize: 16),
+                              style: GoogleFonts.ubuntu(
+                                  color: Colors.red, fontSize: 16),
                             ),
                           ),
                         ),

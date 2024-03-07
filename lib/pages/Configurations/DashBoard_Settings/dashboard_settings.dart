@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 
 class DashBoardSettings extends StatefulWidget {
@@ -49,9 +50,9 @@ class _DashBoardSettingsState extends State<DashBoardSettings> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Dashboard Settings',
-                    style: TextStyle(fontSize: 20),
+                    style: GoogleFonts.ubuntu(fontSize: 20),
                   ),
                   DropdownButtonFormField<String>(
                     value: _selectedItem1,
@@ -83,10 +84,10 @@ class _DashBoardSettingsState extends State<DashBoardSettings> {
                         color: Colors.lightBlue,
                         borderRadius: BorderRadius.circular(10.0),
                       ),
-                      child: const Center(
+                      child: Center(
                           child: Text(
                         'Save',
-                        style: TextStyle(color: Colors.white),
+                        style: GoogleFonts.ubuntu(color: Colors.white),
                       )),
                     ),
                   ),
@@ -170,9 +171,9 @@ class _DashBoardSettingsState extends State<DashBoardSettings> {
                         const SizedBox(
                           width: 15,
                         ),
-                        const Text(
+                        Text(
                           'Enable',
-                          style: TextStyle(fontSize: 20),
+                          style: GoogleFonts.ubuntu(fontSize: 20),
                         ),
                       ],
                     ),
@@ -207,7 +208,7 @@ class _DashBoardSettingsState extends State<DashBoardSettings> {
                           selectionType: SelectionType.multi,
                           chipConfig: const ChipConfig(wrapType: WrapType.wrap),
                           dropdownHeight: 500,
-                          optionTextStyle: const TextStyle(fontSize: 16),
+                          optionTextStyle: GoogleFonts.ubuntu(fontSize: 16),
                           showChipInSingleSelectMode: true,
                           selectedOptionIcon: const Icon(Icons.check_circle),
                         ),
@@ -229,10 +230,10 @@ class _DashBoardSettingsState extends State<DashBoardSettings> {
                             color: Colors.lightBlue,
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          child: const Center(
+                          child: Center(
                             child: Text(
                               'Update',
-                              style: TextStyle(color: Colors.white),
+                              style: GoogleFonts.ubuntu(color: Colors.white),
                             ),
                           ),
                         ),
@@ -246,10 +247,10 @@ class _DashBoardSettingsState extends State<DashBoardSettings> {
                             color: const Color.fromARGB(255, 131, 216, 255),
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          child: const Center(
+                          child: Center(
                             child: Text(
                               'Clear',
-                              style: TextStyle(color: Colors.white),
+                              style: GoogleFonts.ubuntu(color: Colors.white),
                             ),
                           ),
                         ),

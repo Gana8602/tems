@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/pages/reports/report.dart';
 import 'package:route_between_two_points/pages/widget/drawer_left/widget/item.dart';
 import 'package:route_between_two_points/pages/widget/drawer_left/widget/notify.dart';
@@ -28,9 +29,9 @@ class Drawerleft extends StatelessWidget {
           children: <Widget>[
             Column(
               children: [
-                const Text(
+                Text(
                   'T E M S',
-                  style: TextStyle(
+                  style: GoogleFonts.ubuntu(
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -65,9 +66,9 @@ class Drawerleft extends StatelessWidget {
                           child: ListTile(
                             title: TextButton(
                                 onPressed: () {},
-                                child: const Text(
+                                child: Text(
                                   'Log out',
-                                  style: TextStyle(color: Colors.red),
+                                  style: GoogleFonts.ubuntu(color: Colors.red),
                                 )),
                           ),
                         ),
@@ -84,15 +85,15 @@ class Drawerleft extends StatelessWidget {
                                 image: AssetImage('assets/image/admin.png'),
                                 fit: BoxFit.cover)),
                       ),
-                      const Text(
+                      Text(
                         'Admin',
-                        style: TextStyle(
+                        style: GoogleFonts.ubuntu(
                           color: Colors.white,
                         ),
                       ),
-                      const Text(
+                      Text(
                         'ADMINISTRATOR',
-                        style: TextStyle(
+                        style: GoogleFonts.ubuntu(
                           color: Colors.white,
                         ),
                       ),
@@ -124,8 +125,8 @@ class Drawerleft extends StatelessWidget {
                   ),
                   DrawerItem(
                     ontap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const DashBoard()));
+                      // Get.toNamed('/dash');
+                      Get.to(() => DashBoard());
                     },
                     title: 'dashboard',
                     color: Colors.white,

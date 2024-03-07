@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/Maintenance_Dashboard/Maintenance_Requests/Widget/requestpage.dart';
 import 'package:top_modal_sheet/top_modal_sheet.dart';
 
@@ -47,7 +48,7 @@ class _MaintenanceRequestState extends State<MaintenanceRequest> {
           children: [
             Text(
               'Showing of',
-              style: TextStyle(fontSize: 16),
+              style: GoogleFonts.ubuntu(fontSize: 16),
             ),
             const SizedBox(
               height: 10,
@@ -98,7 +99,7 @@ class _MaintenanceRequestState extends State<MaintenanceRequest> {
                       ),
                       label: Text(
                         'Filter',
-                        style: TextStyle(color: Colors.lightBlue),
+                        style: GoogleFonts.ubuntu(color: Colors.lightBlue),
                       )),
                 ),
                 SizedBox(
@@ -122,7 +123,7 @@ class _MaintenanceRequestState extends State<MaintenanceRequest> {
                       ),
                       label: Text(
                         'Add Request',
-                        style: TextStyle(color: Colors.lightBlue),
+                        style: GoogleFonts.ubuntu(color: Colors.lightBlue),
                       )),
                 ),
               ],

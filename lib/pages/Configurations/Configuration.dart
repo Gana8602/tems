@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/pages/widget/bar.dart';
 import 'package:route_between_two_points/pages/widget/drawer_left/drawer_left.dart';
 
@@ -44,17 +45,17 @@ class _ConfigurationsPageState extends State<ConfigurationsPage>
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             'Configurations',
-            style: TextStyle(fontSize: 25),
+            style: GoogleFonts.ubuntu(fontSize: 25),
           ),
           Row(
             children: [
-              const InkWell(
+              InkWell(
                 // onTap: () => Get.to(() => const HomePage()),
                 child: Text(
                   'Home',
-                  style: TextStyle(fontSize: 17),
+                  style: GoogleFonts.ubuntu(fontSize: 17),
                 ),
               ),
               const SizedBox(
@@ -70,14 +71,15 @@ class _ConfigurationsPageState extends State<ConfigurationsPage>
               ),
               InkWell(
                 onTap: () => Get.to(() => const ConfigurationsPage()),
-                child: const Text(
+                child: Text(
                   'Configurations',
-                  style: TextStyle(fontSize: 17),
+                  style: GoogleFonts.ubuntu(fontSize: 17),
                 ),
               ),
             ],
           ),
           TabBar(
+            indicatorSize: TabBarIndicatorSize.tab,
             controller: _tabController,
             // isScrollable: true,
             labelColor: Colors.lightBlue,

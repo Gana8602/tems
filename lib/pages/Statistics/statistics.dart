@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/bool/bool_values.dart';
 import 'package:route_between_two_points/controllers/drawer_controller.dart';
 import 'package:route_between_two_points/pages/Drawer_right/drawer_right.dart';
@@ -7,6 +8,7 @@ import 'package:route_between_two_points/pages/Drawer_right/statis_drawer_filter
 import 'package:route_between_two_points/pages/widget/bar.dart';
 import 'package:route_between_two_points/pages/widget/drawer_left/drawer_left.dart';
 import 'package:route_between_two_points/pages/widget/float_Button.dart';
+import 'package:route_between_two_points/utils/string.dart';
 
 import '../../utils/style.dart';
 import 'widgets/linechart.dart';
@@ -21,7 +23,7 @@ class StatisticsPage extends StatefulWidget {
 }
 
 class _StatisticsPageState extends State<StatisticsPage> {
-  BoolValues _val = Get.put(BoolValues());
+  DrawerStrings _strings = Get.put(DrawerStrings());
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
       key: _scaffoldKey,
       appBar: Head(context),
       drawer: const Drawerleft(),
-      endDrawer: const StaticDra(),
+      endDrawer: DataQADra(),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       floatingActionButton: const FloatButton(),
       body: SingleChildScrollView(
@@ -38,17 +40,17 @@ class _StatisticsPageState extends State<StatisticsPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'Statistics',
-                style: TextStyle(fontSize: 25),
+                style: GoogleFonts.ubuntu(fontSize: 25),
               ),
               Row(
                 children: [
-                  const InkWell(
+                  InkWell(
                     // onTap: () => Get.to(const HomePage()),
                     child: Text(
                       'Home',
-                      style: TextStyle(fontSize: 17),
+                      style: GoogleFonts.ubuntu(fontSize: 17),
                     ),
                   ),
                   const SizedBox(
@@ -64,9 +66,9 @@ class _StatisticsPageState extends State<StatisticsPage> {
                   ),
                   InkWell(
                     onTap: () => Get.to(() => const StatisticsPage()),
-                    child: const Text(
+                    child: Text(
                       'Statistics',
-                      style: TextStyle(fontSize: 17),
+                      style: GoogleFonts.ubuntu(fontSize: 17),
                     ),
                   ),
                 ],
@@ -79,7 +81,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                 child: InkWell(
                   onTap: () {
                     setState(() {
-                      _val.showStatisticDrawer.value = true;
+                      _strings.drawervalue = 'SataticFilter';
                     });
 
                     _scaffoldKey.currentState!.openEndDrawer();
@@ -108,7 +110,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                   SizedBox(width: 6),
                   Text(
                     'Water Temparature',
-                    style: TextStyle(
+                    style: GoogleFonts.ubuntu(
                       color: AppColor.Blue,
                       fontSize: 20,
                     ),

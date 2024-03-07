@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../../utils/style.dart';
 
@@ -220,9 +221,10 @@ class _ConfiguyrationTabState extends State<ConfiguyrationTab> {
                   const SizedBox(
                     width: 10,
                   ),
-                  const Text(
+                  Text(
                     'Enable Maintanance Notification',
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    style: GoogleFonts.ubuntu(
+                        fontSize: 15, fontWeight: FontWeight.bold),
                   )
                 ],
               ),
@@ -236,10 +238,10 @@ class _ConfiguyrationTabState extends State<ConfiguyrationTab> {
                   decoration: BoxDecoration(
                       color: AppColor.Blue,
                       borderRadius: BorderRadius.all(Radius.circular(10))),
-                  child: const Center(
+                  child: Center(
                     child: Text(
                       'Add',
-                      style: TextStyle(
+                      style: GoogleFonts.ubuntu(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ),

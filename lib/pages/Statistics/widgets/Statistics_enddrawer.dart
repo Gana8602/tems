@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../utils/style.dart';
 import '../../widget/style.dart';
@@ -26,7 +27,7 @@ class DrawerRight1 extends StatelessWidget {
                   padding: EdgeInsets.all(8.0),
                   child: Text(
                     'Theme Settings',
-                    // style: TextStyle(
+                    // style: GoogleFonts.ubuntu(
                     //   color: AppColor.BlueGrey,
                     // ),
                   ),
@@ -77,7 +78,7 @@ class DrawerRight1 extends StatelessWidget {
                           ),
                           Text(
                             'Dark Map',
-                            style: TextStyle(
+                            style: GoogleFonts.ubuntu(
                               color: AppColor.Blue,
                             ),
                           )

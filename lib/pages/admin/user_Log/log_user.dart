@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:route_between_two_points/pages/widget/bar.dart';
 import 'package:route_between_two_points/pages/widget/drawer_left/drawer_left.dart';
@@ -82,9 +83,9 @@ class _MyDataTablePageState extends State<MyDataTablePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'User Action Log',
-                style: TextStyle(fontSize: 20),
+                style: GoogleFonts.ubuntu(fontSize: 20),
               ),
               const Row(
                 children: [
@@ -96,9 +97,9 @@ class _MyDataTablePageState extends State<MyDataTablePage> {
                 header: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       'Search : ',
-                      style: TextStyle(fontSize: 15),
+                      style: GoogleFonts.ubuntu(fontSize: 15),
                     ),
                     SizedBox(
                       height: 30,

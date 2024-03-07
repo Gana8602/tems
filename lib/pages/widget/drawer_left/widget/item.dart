@@ -3,17 +3,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/pages/Configurations/Configuration.dart';
 import 'package:route_between_two_points/pages/admin/notification_setting/notification_settings.dart';
 import 'package:route_between_two_points/pages/admin/user_managment/user_manage.dart';
 import 'package:route_between_two_points/pages/station_Master/Coumunication.dart/communication_center.dart';
 import 'package:route_between_two_points/pages/admin/user_Log/log_user.dart';
-import 'package:route_between_two_points/pages/station_Master/Station_Master/Station_Master.dart';
+import 'package:route_between_two_points/pages/station_Master/Station_management/Station_Master.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/Maintenance_Dashboard/Maintenance_Requests/maintenance_requests.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/Maintenance_Dashboard/maintenance_dashboard.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/maintanance_settings/maintanance_setting.dart';
 
 import '../../../../utils/style.dart';
+import '../../../station_Master/DataManagment/data_management.dart';
+import '../../../station_Master/data_manage.dart';
 
 // ignore: must_be_immutable
 class DrawerItem extends StatelessWidget {
@@ -36,7 +39,7 @@ class DrawerItem extends StatelessWidget {
       child: ListTile(
           title: Text(
             title,
-            style: TextStyle(
+            style: GoogleFonts.ubuntu(
               color: color,
               fontSize: 18,
             ),
@@ -67,7 +70,7 @@ class ExpandItem1 extends StatelessWidget {
       leading: ic,
       title: Text(
         MainTitle,
-        style: const TextStyle(color: Colors.white),
+        style: GoogleFonts.ubuntu(color: Colors.white),
       ),
       children: <Widget>[
         Padding(
@@ -75,12 +78,12 @@ class ExpandItem1 extends StatelessWidget {
           child: ListTile(
             leading:
                 SvgPicture.asset('assets/svg/com.svg', color: Colors.white),
-            title: const Text(
+            title: Text(
               'Communication Center',
-              style: TextStyle(color: Colors.white),
+              style: GoogleFonts.ubuntu(color: Colors.white),
             ),
             onTap: () {
-              Get.to(const Communication());
+              Get.to(() => const Communication());
               // Handle submenu 1 tap
             },
           ),
@@ -90,9 +93,9 @@ class ExpandItem1 extends StatelessWidget {
           child: ListTile(
             leading: SvgPicture.asset('assets/svg/s_master.svg',
                 color: Colors.white),
-            title: const Text(
+            title: Text(
               'Station Master',
-              style: TextStyle(color: Colors.white),
+              style: GoogleFonts.ubuntu(color: Colors.white),
             ),
             onTap: () {
               Get.to(() => const StationMaster());
@@ -104,9 +107,9 @@ class ExpandItem1 extends StatelessWidget {
           padding: const EdgeInsets.only(left: 22.0),
           child: ListTile(
             leading: const Icon(Icons.settings_outlined, color: Colors.white),
-            title: const Text(
+            title: Text(
               'Configuration',
-              style: TextStyle(color: Colors.white),
+              style: GoogleFonts.ubuntu(color: Colors.white),
             ),
             onTap: () {
               Get.to(() => const ConfigurationsPage());
@@ -121,11 +124,12 @@ class ExpandItem1 extends StatelessWidget {
               'assets/svg/data_manage.svg',
               color: Colors.white,
             ),
-            title: const Text(
+            title: Text(
               'Data Management',
-              style: TextStyle(color: Colors.white),
+              style: GoogleFonts.ubuntu(color: Colors.white),
             ),
             onTap: () {
+              Get.to(() => DataManagementPage());
               // Handle submenu 2 tap
             },
           ),
@@ -138,7 +142,7 @@ class ExpandItem1 extends StatelessWidget {
                   'assets/svg/spanner.svg',
                   color: Colors.white,
                 ),
-                MainTitle: 'Meintanance Manager')),
+                MainTitle: 'Maintnance Manager')),
       ],
     );
   }
@@ -167,7 +171,7 @@ class ExpandItem1_2 extends StatelessWidget {
         leading: ic,
         title: Text(
           MainTitle,
-          style: const TextStyle(color: Colors.white),
+          style: GoogleFonts.ubuntu(color: Colors.white),
         ),
         children: <Widget>[
           Padding(
@@ -175,9 +179,9 @@ class ExpandItem1_2 extends StatelessWidget {
             child: ListTile(
               leading: SvgPicture.asset('assets/svg/maintanance_settings.svg',
                   color: Colors.white),
-              title: const Text(
+              title: Text(
                 'Maintenance Settings',
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.ubuntu(color: Colors.white),
               ),
               onTap: () {
                 Get.to(() => const MaintananceSettings());
@@ -190,9 +194,9 @@ class ExpandItem1_2 extends StatelessWidget {
             child: ListTile(
               leading: SvgPicture.asset('assets/svg/maintanance_dash.svg',
                   color: Colors.white),
-              title: const Text(
+              title: Text(
                 'Maintenance Dashboard',
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.ubuntu(color: Colors.white),
               ),
               onTap: () {
                 Get.to(() => const MaintenanceDashboardPage());
@@ -228,7 +232,7 @@ class ExpandItem2 extends StatelessWidget {
         leading: ic,
         title: Text(
           MainTitle,
-          style: const TextStyle(color: Colors.white),
+          style: GoogleFonts.ubuntu(color: Colors.white),
         ),
         children: <Widget>[
           Padding(
@@ -236,9 +240,9 @@ class ExpandItem2 extends StatelessWidget {
             child: ListTile(
               leading: SvgPicture.asset('assets/svg/person.svg',
                   color: Colors.white),
-              title: const Text(
+              title: Text(
                 'User Management',
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.ubuntu(color: Colors.white),
               ),
               onTap: () {
                 Get.to(() => const UserManagment());
@@ -251,9 +255,9 @@ class ExpandItem2 extends StatelessWidget {
             child: ListTile(
               leading: SvgPicture.asset('assets/svg/notify.svg',
                   color: Colors.white),
-              title: const Text(
+              title: Text(
                 'Notification Settings',
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.ubuntu(color: Colors.white),
               ),
               onTap: () {
                 Get.to(() => const NotificationSettings());
@@ -266,9 +270,9 @@ class ExpandItem2 extends StatelessWidget {
             child: ListTile(
               leading: SvgPicture.asset('assets/svg/user_action_log.svg',
                   color: Colors.white),
-              title: const Text(
+              title: Text(
                 'User Action Log',
-                style: TextStyle(color: Colors.white),
+                style: GoogleFonts.ubuntu(color: Colors.white),
               ),
               onTap: () {
                 Get.to(() => const MyDataTablePage());

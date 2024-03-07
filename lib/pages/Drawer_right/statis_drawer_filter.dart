@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 
 class StaticticDrawerFilter extends StatefulWidget {
@@ -123,7 +124,7 @@ class _StaticticDrawerFilterState extends State<StaticticDrawerFilter> {
                     selectionType: SelectionType.multi,
                     chipConfig: const ChipConfig(wrapType: WrapType.wrap),
                     dropdownHeight: 300,
-                    optionTextStyle: const TextStyle(fontSize: 16),
+                    optionTextStyle: GoogleFonts.ubuntu(fontSize: 16),
                     selectedOptions: istick
                         ? [
                             ValueItem(label: 'WQ 1', value: '1'),
@@ -170,7 +171,7 @@ class _StaticticDrawerFilterState extends State<StaticticDrawerFilter> {
                   ),
                   Text(
                     'All Station',
-                    style: TextStyle(fontSize: 18),
+                    style: GoogleFonts.ubuntu(fontSize: 18),
                   )
                 ],
               ),
@@ -219,7 +220,7 @@ class _StaticticDrawerFilterState extends State<StaticticDrawerFilter> {
                       selectionType: SelectionType.multi,
                       chipConfig: const ChipConfig(wrapType: WrapType.wrap),
                       dropdownHeight: 300,
-                      optionTextStyle: const TextStyle(fontSize: 16),
+                      optionTextStyle: GoogleFonts.ubuntu(fontSize: 16),
                       showChipInSingleSelectMode: true,
                       selectedOptionIcon: const Icon(Icons.check_circle),
                     ),

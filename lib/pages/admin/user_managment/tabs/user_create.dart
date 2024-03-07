@@ -1,10 +1,11 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 
 import '../../../../utils/style.dart';
-import '../../../station_Master/Station_Master/Tabs/widget.dart';
+import '../../../station_Master/Station_management/Tabs/widget.dart';
 
 class UserCreation extends StatefulWidget {
   const UserCreation({super.key});
@@ -58,11 +59,11 @@ class _UserCreationState extends State<UserCreation> {
           padding: const EdgeInsets.all(8.0),
           child: ListView(
             children: [
-              const Padding(
+              Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
                   'Add New User',
-                  style: TextStyle(fontSize: 20),
+                  style: GoogleFonts.ubuntu(fontSize: 20),
                 ),
               ),
               const Divider(),
@@ -123,7 +124,7 @@ class _UserCreationState extends State<UserCreation> {
                 selectionType: SelectionType.multi,
                 chipConfig: const ChipConfig(wrapType: WrapType.wrap),
                 dropdownHeight: 300,
-                optionTextStyle: const TextStyle(fontSize: 16),
+                // optionGoogleFonts.ubuntu: const GoogleFonts.ubuntu(fontSize: 16),
                 showChipInSingleSelectMode: true,
                 selectedOptions: isChecked ? items : [],
                 selectedOptionIcon: const Icon(Icons.check_circle),
@@ -148,10 +149,10 @@ class _UserCreationState extends State<UserCreation> {
                       decoration: const BoxDecoration(
                           color: Colors.lightBlue,
                           borderRadius: BorderRadius.all(Radius.circular(10))),
-                      child: const Center(
+                      child: Center(
                         child: Text(
                           'Add',
-                          style: TextStyle(color: Colors.white),
+                          style: GoogleFonts.ubuntu(color: Colors.white),
                         ),
                       ),
                     ),
@@ -170,10 +171,10 @@ class _UserCreationState extends State<UserCreation> {
                           color: Colors.lightBlueAccent.withOpacity(0.8),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(10))),
-                      child: const Center(
+                      child: Center(
                         child: Text(
                           'Clear',
-                          style: TextStyle(color: Colors.white),
+                          style: GoogleFonts.ubuntu(color: Colors.white),
                         ),
                       ),
                     ),

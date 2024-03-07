@@ -4,6 +4,7 @@ import 'package:expandable_datatable/expandable_datatable.dart';
 import 'package:flutter/material.dart';
 // import 'package:expandable_datatable/expandable_datatable.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/bool/bool_values.dart';
 import 'package:route_between_two_points/controllers/drawer_controller.dart';
 import 'package:route_between_two_points/controllers/report_Controller.dart';
@@ -13,6 +14,7 @@ import 'package:route_between_two_points/pages/reports/widget/report_data.dart';
 import 'package:route_between_two_points/pages/widget/bar.dart';
 import 'package:route_between_two_points/pages/widget/drawer_left/drawer_left.dart';
 import 'package:route_between_two_points/pages/widget/float_Button.dart';
+import 'package:route_between_two_points/utils/string.dart';
 
 import '../../utils/style.dart';
 
@@ -26,8 +28,7 @@ class ExpandableTableExample extends StatefulWidget {
 class _ExpandableTableExampleState extends State<ExpandableTableExample> {
   final ReportController controller = Get.put(ReportController());
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  late final BoolValues value =
-      Get.put(BoolValues()); // Declare BoolValues variable
+  DrawerStrings _string = Get.put(DrawerStrings());
 
   @override
   Widget build(BuildContext context) {
@@ -35,22 +36,12 @@ class _ExpandableTableExampleState extends State<ExpandableTableExample> {
       key: _scaffoldKey,
       appBar: Head(context),
       floatingActionButton: const FloatButton(),
-      endDrawer: DrawerNav(),
-      // Obx(() {
-      //   return BoolValues(context).showFilterDrawer.value
-      //       ?
-      // FilterDrawer(),
-      //       : DrawerRight();
-      // }),
-      // value.showFilterDrawer.value
-      //     ? const FilterDrawer()
-      //     : const DrawerRight(),
-      // ignore: prefer_const_constructors
+      endDrawer: DataQADra(),
       drawer: Drawerleft(),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ListView(children: [
-          const Text('Reports', style: TextStyle(fontSize: 20)),
+          Text('Reports', style: GoogleFonts.ubuntu(fontSize: 20)),
           const Row(
             children: [Text('Home | '), Text('Reports')],
           ),
@@ -60,7 +51,7 @@ class _ExpandableTableExampleState extends State<ExpandableTableExample> {
           GestureDetector(
             onTap: () async {
               setState(() {
-                value.showFilterDrawer.value = true;
+                _string.drawervalue = 'reportFilter';
               });
 
               _scaffoldKey.currentState!.openEndDrawer();
@@ -74,16 +65,16 @@ class _ExpandableTableExampleState extends State<ExpandableTableExample> {
               child: Center(
                   child: Text(
                 '+ Filter',
-                style: TextStyle(color: AppColor.Blue, fontSize: 16),
+                style: GoogleFonts.ubuntu(color: AppColor.Blue, fontSize: 16),
               )),
             ),
           ),
           const SizedBox(
             height: 15,
           ),
-          const Text(
+          Text(
             'Water Quality',
-            style: TextStyle(fontSize: 18),
+            style: GoogleFonts.ubuntu(fontSize: 18),
           ),
           const SizedBox(
             height: 10,

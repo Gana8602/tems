@@ -4,14 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/pages/Drawer_right/add_station.dart';
 import 'package:route_between_two_points/pages/Drawer_right/drawer_right.dart';
 import 'package:route_between_two_points/pages/dashboard/Full_screen_map.dart';
 import 'package:route_between_two_points/pages/widget/bar.dart';
 import 'package:route_between_two_points/pages/widget/drawer_left/drawer_left.dart';
 import 'package:route_between_two_points/pages/widget/style.dart';
+import 'package:route_between_two_points/utils/string.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 import 'package:marquee/marquee.dart';
+import '../../controllers/drawer_controller.dart';
 import '../../utils/style.dart';
 import '../widget/float_Button.dart';
 import '../widget/source.dart';
@@ -24,7 +27,9 @@ class DashBoard extends StatefulWidget {
 }
 
 class _DashBoardState extends State<DashBoard> {
+  DrawerStrings _string = Get.put(DrawerStrings());
   final MapStyle controller = Get.put(MapStyle());
+  final GlobalKey<ScaffoldState> _key = GlobalKey<ScaffoldState>();
   final double val = 23.7;
   DateTime? todaydate;
   String _selectedItem = 'wQ 1';
@@ -71,9 +76,10 @@ class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
       appBar: Head(context),
       drawer: const Drawerleft(),
-      endDrawer: const AddStation(),
+      endDrawer: DataQADra(),
       floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
       floatingActionButton: const FloatButton(),
       body: SingleChildScrollView(
@@ -86,14 +92,14 @@ class _DashBoardState extends State<DashBoard> {
               width: MediaQuery.of(context).size.width,
               child: Marquee(
                   text: '*** Buoy moved out of danger circle, take action***',
-                  style: const TextStyle(backgroundColor: Colors.red),
+                  style: GoogleFonts.ubuntu(backgroundColor: Colors.red),
                   blankSpace: MediaQuery.of(context).size.width,
                   startPadding: 10,
                   scrollAxis: Axis.horizontal),
             ),
-            const Text(
+            Text(
               'Dashboard',
-              style: TextStyle(fontSize: 20),
+              style: GoogleFonts.ubuntu(fontSize: 20),
             ),
             Row(
               children: [
@@ -116,7 +122,7 @@ class _DashBoardState extends State<DashBoard> {
               children: [
                 Text(
                   'Last Updated : ',
-                  style: TextStyle(color: AppColor.Blue),
+                  style: GoogleFonts.ubuntu(color: AppColor.Blue),
                 ),
                 Text(
                   ' $todaydate}',
@@ -128,7 +134,7 @@ class _DashBoardState extends State<DashBoard> {
             ),
             Text(
               'WQ 1',
-              style: TextStyle(fontSize: 30, color: AppColor.Blue),
+              style: GoogleFonts.ubuntu(fontSize: 30, color: AppColor.Blue),
             ),
             const SizedBox(
               height: 7,
@@ -163,7 +169,10 @@ class _DashBoardState extends State<DashBoard> {
                 ),
                 InkWell(
                   onTap: () {
-                    Scaffold.of(context).openEndDrawer();
+                    setState(() {
+                      _string.drawervalue = 'addStation';
+                    });
+                    _key.currentState!.openEndDrawer();
                   },
                   child: Container(
                     height: 50,
@@ -333,16 +342,17 @@ class _DashBoardState extends State<DashBoard> {
                   const SizedBox(
                     height: 5,
                   ),
-                  const Text(
+                  Text(
                     '23.51',
-                    style: TextStyle(fontSize: 22),
+                    style: GoogleFonts.ubuntu(fontSize: 22),
                   ),
                   const SizedBox(
                     height: 5,
                   ),
                   Text(
                     'Water  Temprature',
-                    style: TextStyle(fontSize: 27, color: AppColor.Blue),
+                    style:
+                        GoogleFonts.ubuntu(fontSize: 27, color: AppColor.Blue),
                   ),
                 ]),
               ),
@@ -386,14 +396,15 @@ class _DashBoardState extends State<DashBoard> {
                         ),
                         Text(
                           dataValue2[i]['value'].toString(),
-                          style: const TextStyle(fontSize: 22),
+                          style: GoogleFonts.ubuntu(fontSize: 22),
                         ),
                         const SizedBox(
                           height: 5,
                         ),
                         Text(
                           'Water  Temprature',
-                          style: TextStyle(fontSize: 27, color: AppColor.Blue),
+                          style: GoogleFonts.ubuntu(
+                              fontSize: 27, color: AppColor.Blue),
                         ),
                       ]),
                     ),

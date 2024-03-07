@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 import 'package:route_between_two_points/utils/style.dart';
 
@@ -94,7 +95,7 @@ class _AddStationState extends State<AddStation> {
                 ),
                 Text(
                   'All Station',
-                  style: TextStyle(fontSize: 18),
+                  style: GoogleFonts.ubuntu(fontSize: 18),
                 )
               ],
             ),
@@ -111,7 +112,7 @@ class _AddStationState extends State<AddStation> {
               selectionType: SelectionType.multi,
               chipConfig: const ChipConfig(wrapType: WrapType.wrap),
               dropdownHeight: 300,
-              optionTextStyle: const TextStyle(fontSize: 16),
+              optionTextStyle: GoogleFonts.ubuntu(fontSize: 16),
               selectedOptions: istick
                   ? [
                       ValueItem(label: 'WQ 1', value: '1'),
@@ -160,7 +161,7 @@ class _AddStationState extends State<AddStation> {
                   child: Center(
                     child: Text(
                       'Cancel',
-                      style: TextStyle(color: AppColor.Blue),
+                      style: GoogleFonts.ubuntu(color: AppColor.Blue),
                     ),
                   ),
                 ),
@@ -177,7 +178,7 @@ class _AddStationState extends State<AddStation> {
                   child: Center(
                     child: Text(
                       'Search',
-                      style: TextStyle(color: Colors.white),
+                      style: GoogleFonts.ubuntu(color: Colors.white),
                     ),
                   ),
                 )

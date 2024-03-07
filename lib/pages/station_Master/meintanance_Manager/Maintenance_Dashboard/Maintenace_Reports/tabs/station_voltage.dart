@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StationVoltage extends StatefulWidget {
   VoidCallback onNext;
@@ -25,7 +26,7 @@ class _StationVoltageState extends State<StationVoltage> {
           children: [
             Text(
               'Station Voltage',
-              style: TextStyle(color: Colors.blue, fontSize: 16),
+              style: GoogleFonts.ubuntu(color: Colors.blue, fontSize: 16),
             ),
             SizedBox(
               height: 25,

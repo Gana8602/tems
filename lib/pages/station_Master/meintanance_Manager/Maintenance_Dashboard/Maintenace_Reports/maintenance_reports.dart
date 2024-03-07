@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:route_between_two_points/pages/station_Master/meintanance_Manager/Maintenance_Dashboard/Maintenace_Reports/widget/add_report.dart';
 import 'package:top_modal_sheet/top_modal_sheet.dart';
 
@@ -32,7 +33,7 @@ class _MaintenanceReportsState extends State<MaintenanceReports> {
           children: [
             Text(
               'Showing of',
-              style: TextStyle(fontSize: 16),
+              style: GoogleFonts.ubuntu(fontSize: 16),
             ),
             const SizedBox(
               height: 10,
@@ -83,7 +84,7 @@ class _MaintenanceReportsState extends State<MaintenanceReports> {
                       ),
                       label: Text(
                         'Filter',
-                        style: TextStyle(color: Colors.lightBlue),
+                        style: GoogleFonts.ubuntu(color: Colors.lightBlue),
                       )),
                 ),
                 SizedBox(
@@ -107,7 +108,7 @@ class _MaintenanceReportsState extends State<MaintenanceReports> {
                       ),
                       label: Text(
                         'Add Report',
-                        style: TextStyle(color: Colors.lightBlue),
+                        style: GoogleFonts.ubuntu(color: Colors.lightBlue),
                       )),
                 ),
               ],

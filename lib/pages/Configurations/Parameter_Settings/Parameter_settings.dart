@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/con_drop.dart';
 import '../widgets/con_text.dart';
@@ -60,9 +61,9 @@ class _ParameterSettingsState extends State<ParameterSettings> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Parameter Settings',
-                    style: TextStyle(fontSize: 20.0),
+                    style: GoogleFonts.ubuntu(fontSize: 20.0),
                   ),
                   const SizedBox(
                     height: 20,
@@ -74,22 +75,22 @@ class _ParameterSettingsState extends State<ParameterSettings> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
                           'Sensors*',
-                          style: TextStyle(fontSize: 16.0),
+                          style: GoogleFonts.ubuntu(fontSize: 16.0),
                         ),
                       ),
                       ConDrop(val: _sensorSelected, items: _sensorList),
                       const SizedBox(
                         height: 20,
                       ),
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
                           'Parameter*',
-                          style: TextStyle(fontSize: 16.0),
+                          style: GoogleFonts.ubuntu(fontSize: 16.0),
                         ),
                       ),
                       ConDrop(val: _parameterSelected, items: _parametersList)
@@ -104,11 +105,11 @@ class _ParameterSettingsState extends State<ParameterSettings> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Padding(
+                            Padding(
                               padding: EdgeInsets.all(8.0),
                               child: Text(
                                 'Unit*',
-                                style: TextStyle(fontSize: 16.0),
+                                style: GoogleFonts.ubuntu(fontSize: 16.0),
                               ),
                             ),
                             ConDrop(val: _unitSelected, items: _unitList)
@@ -122,11 +123,11 @@ class _ParameterSettingsState extends State<ParameterSettings> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Padding(
+                            Padding(
                               padding: EdgeInsets.all(8.0),
                               child: Text(
                                 'Minimum Value*',
-                                style: TextStyle(fontSize: 16.0),
+                                style: GoogleFonts.ubuntu(fontSize: 16.0),
                               ),
                             ),
                             ConfigText(val: '-5')
@@ -144,11 +145,11 @@ class _ParameterSettingsState extends State<ParameterSettings> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Padding(
+                            Padding(
                               padding: EdgeInsets.all(8.0),
                               child: Text(
                                 'Maximum Value*',
-                                style: TextStyle(fontSize: 16.0),
+                                style: GoogleFonts.ubuntu(fontSize: 16.0),
                               ),
                             ),
                             ConfigText(val: '50')
@@ -162,11 +163,11 @@ class _ParameterSettingsState extends State<ParameterSettings> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Padding(
+                            Padding(
                               padding: EdgeInsets.all(8.0),
                               child: Text(
                                 'Warning Threshold*',
-                                style: TextStyle(fontSize: 16.0),
+                                style: GoogleFonts.ubuntu(fontSize: 16.0),
                               ),
                             ),
                             ConfigText(val: '30')
@@ -184,11 +185,11 @@ class _ParameterSettingsState extends State<ParameterSettings> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Padding(
+                            Padding(
                               padding: EdgeInsets.all(8.0),
                               child: Text(
                                 'Danger Threshold*',
-                                style: TextStyle(fontSize: 16.0),
+                                style: GoogleFonts.ubuntu(fontSize: 16.0),
                               ),
                             ),
                             ConfigText(val: '40')
@@ -202,11 +203,11 @@ class _ParameterSettingsState extends State<ParameterSettings> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Padding(
+                            Padding(
                               padding: EdgeInsets.all(8.0),
                               child: Text(
                                 'Round To*',
-                                style: TextStyle(fontSize: 16.0),
+                                style: GoogleFonts.ubuntu(fontSize: 16.0),
                               ),
                             ),
                             ConfigText(val: '2')
@@ -236,10 +237,10 @@ class _ParameterSettingsState extends State<ParameterSettings> {
                           color: Colors.lightBlue,
                           borderRadius: BorderRadius.circular(10.0),
                         ),
-                        child: const Center(
+                        child: Center(
                             child: Text(
                           'Save',
-                          style: TextStyle(color: Colors.white),
+                          style: GoogleFonts.ubuntu(color: Colors.white),
                         )),
                       ),
                     ),
